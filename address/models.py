@@ -181,7 +181,7 @@ class Country(models.Model):
 @python_2_unicode_compatible
 class State(models.Model):
     name = models.CharField(max_length=165, blank=True)
-    code = models.CharField(max_length=3, blank=True)
+    code = models.CharField(max_length=254, blank=True)
     country = models.ForeignKey(Country, on_delete=models.CASCADE, related_name='states')
 
     class Meta:
